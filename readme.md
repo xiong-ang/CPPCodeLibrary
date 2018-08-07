@@ -3,7 +3,8 @@
 ## GetInfo       
 
 + GetMsiInfo
-    Get Msi Info by msi.dll, the info includes: ProductName/Version/ProductID...
+    Get Msi Info by msi.dll, the info includes: ProductName/Version/ProductID...                 
+    Get ProductCode and UpgradeCode by PS                
 + GetProcessName      
     Get Process Name by **GetModuleFileName**      
 + GetRegKey   
