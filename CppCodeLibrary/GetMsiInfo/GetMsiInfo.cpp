@@ -54,6 +54,16 @@ How to get product name and code:
 
 	# copy this line as well
 	-------------------------------------------------------------------------------------------------------------------
+	
+	OR:
+	
+	#Get Product code
+	#https://stackoverflow.com/questions/29937568/how-can-i-find-the-product-guid-of-an-installed-msi-setup
+	get-wmiobject Win32_Product | Format-Table IdentifyingNumber, Name, LocalPackage -AutoSize     
+
+	#Get Upgrade code
+	#https://stackoverflow.com/questions/46637094/how-can-i-find-the-upgrade-code-for-an-installed-msi-file/46637095#46637095
+	gwmi -Query "SELECT ProductCode,Value FROM Win32_Property WHERE Property='UpgradeCode'" | Format-Table ProductCode,Value
 */
 
 #pragma comment(lib,"msi.lib")
